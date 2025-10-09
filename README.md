@@ -1,7 +1,7 @@
 # Journal_To_DayOne
 ## Moving Journal Entries from Apple Journal App to Day One App
 
-- Apple Journal has some disadvantages, so thought of using Day One App.
+- Apple Journal has a few limitations, so thought of using Day One App.
 - To move journal entries, export it from Apple's Journal.
 - Only suppported format is HTML.
 - Exported Zip Folder - AppleJournalEntries.
