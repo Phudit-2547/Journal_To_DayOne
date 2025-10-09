@@ -7,10 +7,11 @@
 - Exported Zip Folder - AppleJournalEntries.
 - In that we have index.html, Entries Folder and Photos.
 - In Entries Folder, we have all journal entries in HTML format.
-- But i have some date issue with the date mentioned in file name and journal content date, that also addressed here.
+- I had some date issue with the date mentioned in file name and journal content date, that also addressed here.
+- But cross check once before you use this code.
 
 - In this code, we will extract HTML content to text using BeautifulSoup in Python.
-- And create JSON file with Journal entries as Day One accepts JSON format.
+- And create JSON file with Journal entries, as Day One accepts JSON format.
 
 ### Sample Day One acceptable JSON Format:
 ```
