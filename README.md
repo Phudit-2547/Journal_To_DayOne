@@ -3,11 +3,11 @@
 
 - Apple Journal has some disadvantages, so thought of using Day One App.
 - To move journal entries, export it from Apple's Journal.
-- Only suppported format is html
-- Exported Zip Folder - AppleJournalEntries
+- Only suppported format is HTML.
+- Exported Zip Folder - AppleJournalEntries.
 - In that we have index.html, Entries Folder and Photos.
 - In Entries Folder, we have all journal entries in HTML format.
-- But i have some date issue with the date mentioned in file name and journal content date.
+- But i have some date issue with the date mentioned in file name and journal content date, that also addressed here.
 
 - In this code, we will extract HTML content to text using BeautifulSoup in Python.
 - And create JSON file with Journal entries as Day One accepts JSON format.
