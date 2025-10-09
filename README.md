@@ -1,18 +1,19 @@
 # Journal_To_DayOne
-Moving Journal Entries from Apple Journal App to Day One App
+## Moving Journal Entries from Apple Journal App to Day One App
 
-Apple Journal has some disadvantages, so thought of using Day One App.
-To move journal entries, export it from Apple's Journal.
-Only suppported format is html
-Exported Zip Folder - AppleJournalEntries
-In that we have index.html, Entries Folder and Photos.
-In Entries Folder, we have all journal entries in HTML format.
-But i have some date issue with the date mentioned in file name and journal content date.
+- Apple Journal has some disadvantages, so thought of using Day One App.
+- To move journal entries, export it from Apple's Journal.
+- Only suppported format is html
+- Exported Zip Folder - AppleJournalEntries
+- In that we have index.html, Entries Folder and Photos.
+- In Entries Folder, we have all journal entries in HTML format.
+- But i have some date issue with the date mentioned in file name and journal content date.
 
-In this code, we will extract HTML content to text using BeautifulSoup in Python.
-And create JSON file with Journal entries as Day One accepts JSON format.
+- In this code, we will extract HTML content to text using BeautifulSoup in Python.
+- And create JSON file with Journal entries as Day One accepts JSON format.
 
-Sample Day One acceptable JSON Format:
+### Sample Day One acceptable JSON Format:
+```
 {
   "metadata": {
     "version": "1.0"
@@ -44,8 +45,9 @@ Sample Day One acceptable JSON Format:
     }
   ]
 }
-
-Output of this Code:
+```
+### Output of this Code:
+```
 {
   "metadata": {
     "version": "1.0",
@@ -64,6 +66,7 @@ Output of this Code:
     }
    ]
   }
+```
 
-  Zip this JSON file inside a folder and import it in DayOne App.
-  Happy Journaling!
+- Zip this JSON file inside a folder and import it in DayOne App.
+- Happy Journaling!
