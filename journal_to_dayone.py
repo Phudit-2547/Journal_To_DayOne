@@ -20,9 +20,28 @@ def process_journal_entry(text):
 
         # Extract date from first line
         date_line = text.partition('\n')[0].strip() # Sunday, January 14, 2024
-        date_str = date_line.split(', ', 1)[1]  # January 14, 2024
-        # Set time to 12:00 (noon) to avoid timezone cutoff issues
-        parsed_date = datetime.strptime(date_str, "%B %d, %Y") + timedelta(hours=12)
+        # date_str examples:
+        # "January 14, 2024"
+        # "23 September 2568 BE"
+
+        date_str = date_line.split(', ', 1)[1].strip()
+
+        # Strip "BE" if present
+        if date_str.endswith("BE"):
+            date_str = date_str[:-2].strip()
+
+        if "," in date_str:
+            # "January 14, 2024"
+            dt = datetime.strptime(date_str, "%B %d, %Y")
+        else:
+            # "23 September 2568"
+            d, m, y = date_str.split()
+            y = int(y)
+            if y > 2400:  # Buddhist Era year
+                y -= 543   # Thailand BE is Gregorian + 543
+            dt = datetime.strptime(f"{d} {m} {y}", "%d %B %Y")
+
+        parsed_date = dt + timedelta(hours=12)
         creation_date = parsed_date.strftime("%Y-%m-%dT%H:%M:%SZ") # 2025-10-08T12:00:00Z
 
         return {
@@ -61,7 +80,7 @@ def process_all_html_files(folder_path):
     return final_json
 
 # SET YOUR FOLDER PATH HERE
-folder_path = "C:/Users/admin/OneDrive/Desktop/AppleJournalEntries/Entries"
+folder_path = "/AppleJournalEntries/Entries"
 
 # Process all HTML files and get the final JSON
 journal_entries_json = process_all_html_files(folder_path)
