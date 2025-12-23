@@ -13,6 +13,16 @@
 - Here we will extract HTML content to text using BeautifulSoup in Python.
 - And create JSON file with Journal entries, as Day One accepts JSON format.
 
+### ⚠️ Important Step Before Running
+You **must** update the folder path in the script to match your local file system.
+1. Open `journal_to_dayone.py`.
+2. Find the line:
+   ```python
+   # SET YOUR FOLDER PATH HERE
+   folder_path = "/AppleJournalEntries/Entries"
+   ```
+3. Change `/AppleJournalEntries/Entries` to the actual path where your exported entries are located.
+
 ### Sample Day One acceptable JSON Format:
 ```
 {
